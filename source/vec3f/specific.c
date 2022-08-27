@@ -16,7 +16,7 @@ t_vec3f	ft_vec3f_cross(t_vec3f a, t_vec3f b)
 {
 	return (ft_vec3f (
 			a.y * b.z - a.z * b.y,
-			a.z * b.x - a.x * b.x,
+			a.z * b.x - a.x * b.z,
 			a.x * b.y - a.y * b.x
 		));
 }
