@@ -88,6 +88,9 @@ t_vec3f	ft_vec3f_reject(t_vec3f a, t_vec3f b);
 
 t_vec3f	ft_vec3f_cross(t_vec3f a, t_vec3f b);
 t_f32	ft_vec3f_signed_angle(t_vec3f a, t_vec3f b, t_vec3f axis);
+void	ft_vec3f_right_to_orthonormal(t_vec3f r, t_vec3f *u, t_vec3f *f);
+void	ft_vec3f_up_to_orthonormal(t_vec3f u, t_vec3f *r, t_vec3f *f);
+void	ft_vec3f_forward_to_orthonormal(t_vec3f f, t_vec3f *r, t_vec3f *u);
 
 t_vec3f	ft_vec3f_add(t_vec3f a, t_vec3f b);
 t_vec3f	ft_vec3f_sub(t_vec3f a, t_vec3f b);
@@ -239,6 +242,7 @@ t_mat4f	ft_mat4f_inverse(t_mat4f m);
 t_mat4f	ft_mat4f_rotate(t_vec3f axis, t_f32 angle);
 t_mat4f	ft_mat4f_scale(t_vec3f scale);
 t_mat4f	ft_mat4f_translate(t_vec3f translation);
+t_mat4f	ft_mat4f_look_at(t_vec3f origin, t_vec3f dir);
 
 t_mat4f	ft_mat4f_add(t_mat4f a, t_mat4f b);
 t_mat4f	ft_mat4f_sub(t_mat4f a, t_mat4f b);
@@ -247,5 +251,7 @@ t_mat4f	ft_mat4f_mulf(t_mat4f m, t_f32 s);
 t_mat4f	ft_mat4f_divf(t_mat4f m, t_f32 s);
 t_vec4f	ft_mat4f_mulv(t_mat4f a, t_vec4f b);
 t_mat4f	ft_mat4f_mul(t_mat4f a, t_mat4f b);
+t_vec3f	ft_mat4f_transform_point(t_mat4f m, t_vec3f v);
+t_vec3f	ft_mat4f_transform_dir(t_mat4f m, t_vec3f v);
 
 #endif
