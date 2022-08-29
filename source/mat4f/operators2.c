@@ -45,3 +45,13 @@ t_mat4f	ft_mat4f_mul(t_mat4f a, t_mat4f b)
 	res.r3c3 = a.r3c0 * b.r0c3 + a.r3c1 * b.r1c3 + a.r3c2 * b.r2c3 + a.r3c3 * b.r3c3;
 	return (res);
 }
+
+t_vec3f	ft_mat4f_transform_point(t_mat4f m, t_vec3f v)
+{
+	return (ft_mat4f_mulv (m, ft_vec4f (v.x, v.y, v.z, 1)).xyz);
+}
+
+t_vec3f	ft_mat4f_transform_dir(t_mat4f m, t_vec3f v)
+{
+	return (ft_mat4f_mulv (m, ft_vec4f (v.x, v.y, v.z, 0)).xyz);
+}
