@@ -34,3 +34,27 @@ t_mat4f	ft_mat4f_transposed(t_mat4f m)
 	res.r3c3 = m.r3c3;
 	return (res);
 }
+
+t_vec3f	ft_mat4f_right_vector(t_mat4f m)
+{
+	return (ft_vec3f_normalized (ft_mat4f_column (m, 0).xyz));
+}
+
+t_vec3f	ft_mat4f_up_vector(t_mat4f m)
+{
+	return (ft_vec3f_normalized (ft_mat4f_column (m, 1).xyz));
+}
+
+t_vec3f	ft_mat4f_forward_vector(t_mat4f m)
+{
+	return (ft_vec3f_normalized (ft_mat4f_column (m, 2).xyz));
+}
+
+t_vec3f	ft_mat4f_scale_vector(t_mat4f m)
+{
+	return (ft_vec3f (
+			ft_vec3f_len (ft_mat4f_column (m, 0).xyz),
+			ft_vec3f_len (ft_mat4f_column (m, 1).xyz),
+			ft_vec3f_len (ft_mat4f_column (m, 2).xyz)
+		));
+}

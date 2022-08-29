@@ -21,7 +21,7 @@ ifdef OS
 
 OBJ_FILES = $(SRC_FILES:.c=.obj)
 CC = cl
-C_FLAGS = -I. -I$(LIBFT_DIR) -TC -nologo
+C_FLAGS = -I. -I$(LIBFT_DIR) -TC -nologo #-O2
 
 else
 

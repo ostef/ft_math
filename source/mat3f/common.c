@@ -32,27 +32,3 @@ t_vec3f	ft_mat3f_column(t_mat3f m, t_int i)
 {
 	return (ft_vec3f (m.n[0][i], m.n[1][i], m.n[2][i]));
 }
-
-t_vec3f	ft_mat3f_right_vector(t_mat3f m)
-{
-	return (ft_vec3f_normalized (ft_mat3f_column (m, 0)));
-}
-
-t_vec3f	ft_mat3f_up_vector(t_mat3f m)
-{
-	return (ft_vec3f_normalized (ft_mat3f_column (m, 1)));
-}
-
-t_vec3f	ft_mat3f_forward_vector(t_mat3f m)
-{
-	return (ft_vec3f_normalized (ft_mat3f_column (m, 2)));
-}
-
-t_vec3f	ft_mat3f_scale_vector(t_mat3f m)
-{
-	return (ft_vec3f (
-			ft_vec3f_len (ft_mat3f_column (m, 0)),
-			ft_vec3f_len (ft_mat3f_column (m, 1)),
-			ft_vec3f_len (ft_mat3f_column (m, 2))
-		));
-}

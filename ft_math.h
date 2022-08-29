@@ -30,8 +30,6 @@ typedef union s_vec2f
 }	t_vec2f;
 
 t_vec2f	ft_vec2f(t_f32 x, t_f32 y);
-//t_vec2f	ft_vec2f_from_vec2i(t_vec2i v);
-//t_vec2f	ft_vec2f_from_vec3i(t_vec3i v);
 
 t_f32	ft_vec2f_dot(t_vec2f a, t_vec2f b);
 t_f32	ft_vec2f_len(t_vec2f v);
@@ -74,8 +72,6 @@ typedef union s_vec3f
 }	t_vec3f;
 
 t_vec3f	ft_vec3f(t_f32 x, t_f32 y, t_f32 z);
-//t_vec3f	ft_vec3f_from_vec3i(t_vec3i v);
-//t_vec3f	ft_vec3f_from_vec2i(t_vec2i v, t_f32 z);
 
 t_f32	ft_vec3f_dot(t_vec3f a, t_vec3f b);
 t_f32	ft_vec3f_len(t_vec3f v);
@@ -158,6 +154,18 @@ typedef union s_mat3f
 {
 	struct
 	{
+		t_f32	n00;
+		t_f32	n01;
+		t_f32	n02;
+		t_f32	n10;
+		t_f32	n11;
+		t_f32	n12;
+		t_f32	n20;
+		t_f32	n21;
+		t_f32	n22;
+	};
+	struct
+	{
 		t_f32	r0c0;
 		t_f32	r0c1;
 		t_f32	r0c2;
@@ -200,6 +208,25 @@ t_mat3f	ft_mat3f_mul(t_mat3f a, t_mat3f b);
 
 typedef union s_mat4f
 {
+	struct
+	{
+		t_f32	n00;
+		t_f32	n01;
+		t_f32	n02;
+		t_f32	n03;
+		t_f32	n10;
+		t_f32	n11;
+		t_f32	n12;
+		t_f32	n13;
+		t_f32	n20;
+		t_f32	n21;
+		t_f32	n22;
+		t_f32	n23;
+		t_f32	n30;
+		t_f32	n31;
+		t_f32	n32;
+		t_f32	n33;
+	};
 	struct
 	{
 		t_f32	r0c0;

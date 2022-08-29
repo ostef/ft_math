@@ -39,27 +39,3 @@ t_vec4f	ft_mat4f_column(t_mat4f m, t_int i)
 {
 	return (ft_vec4f (m.n[0][i], m.n[1][i], m.n[2][i], m.n[3][i]));
 }
-
-t_vec3f	ft_mat4f_right_vector(t_mat4f m)
-{
-	return (ft_vec3f_normalized (ft_mat4f_column (m, 0).xyz));
-}
-
-t_vec3f	ft_mat4f_up_vector(t_mat4f m)
-{
-	return (ft_vec3f_normalized (ft_mat4f_column (m, 1).xyz));
-}
-
-t_vec3f	ft_mat4f_forward_vector(t_mat4f m)
-{
-	return (ft_vec3f_normalized (ft_mat4f_column (m, 2).xyz));
-}
-
-t_vec3f	ft_mat4f_scale_vector(t_mat4f m)
-{
-	return (ft_vec3f (
-			ft_vec3f_len (ft_mat4f_column (m, 0).xyz),
-			ft_vec3f_len (ft_mat4f_column (m, 1).xyz),
-			ft_vec3f_len (ft_mat4f_column (m, 2).xyz)
-		));
-}

@@ -12,7 +12,7 @@
 
 #include "ft_math.h"
 
-void ft_vec3f_right_to_orthonormal(t_vec3f r, t_vec3f *u, t_vec3f *f)
+void	ft_vec3f_right_to_orthonormal(t_vec3f r, t_vec3f *u, t_vec3f *f)
 {
 	t_vec3f	up;
 	t_vec3f	forward;
@@ -31,7 +31,7 @@ void ft_vec3f_right_to_orthonormal(t_vec3f r, t_vec3f *u, t_vec3f *f)
 		*f = ft_vec3f_normalized (forward);
 }
 
-void ft_vec3f_up_to_orthonormal(t_vec3f u, t_vec3f *r, t_vec3f *f)
+void	ft_vec3f_up_to_orthonormal(t_vec3f u, t_vec3f *r, t_vec3f *f)
 {
 	t_vec3f	right;
 	t_vec3f	forward;
@@ -50,7 +50,7 @@ void ft_vec3f_up_to_orthonormal(t_vec3f u, t_vec3f *r, t_vec3f *f)
 		*f = ft_vec3f_normalized (forward);
 }
 
-void ft_vec3f_forward_to_orthonormal(t_vec3f f, t_vec3f *r, t_vec3f *u)
+void	ft_vec3f_forward_to_orthonormal(t_vec3f f, t_vec3f *r, t_vec3f *u)
 {
 	t_vec3f	right;
 	t_vec3f	up;
