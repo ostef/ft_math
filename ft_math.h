@@ -252,6 +252,6 @@ t_mat4f	ft_mat4f_divf(t_mat4f m, t_f32 s);
 t_vec4f	ft_mat4f_mulv(t_mat4f a, t_vec4f b);
 t_mat4f	ft_mat4f_mul(t_mat4f a, t_mat4f b);
 t_vec3f	ft_mat4f_transform_point(t_mat4f m, t_vec3f v);
-t_vec3f	ft_mat4f_transform_dir(t_mat4f m, t_vec3f v);
+t_vec3f	ft_mat4f_transform_vector(t_mat4f m, t_vec3f v);
 
 #endif

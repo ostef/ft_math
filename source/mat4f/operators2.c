@@ -51,7 +51,7 @@ t_vec3f	ft_mat4f_transform_point(t_mat4f m, t_vec3f v)
 	return (ft_mat4f_mulv (m, ft_vec4f (v.x, v.y, v.z, 1)).xyz);
 }
 
-t_vec3f	ft_mat4f_transform_dir(t_mat4f m, t_vec3f v)
+t_vec3f	ft_mat4f_transform_vector(t_mat4f m, t_vec3f v)
 {
 	return (ft_mat4f_mulv (m, ft_vec4f (v.x, v.y, v.z, 0)).xyz);
 }
