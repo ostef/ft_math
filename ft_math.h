@@ -16,6 +16,7 @@
 # include "libft.h"
 # include <math.h>
 
+t_f32	ft_fast_inv_sqrt(t_f32 x);
 t_bool	ft_approx_equ(t_f32 a, t_f32 b, t_f32 e);
 t_bool	ft_approx_zero(t_f32 a, t_f32 e);
 
@@ -64,6 +65,12 @@ typedef union s_vec3f
 	};
 	struct
 	{
+		t_f32	r;
+		t_f32	g;
+		t_f32	b;
+	};
+	struct
+	{
 		t_f32	dummy_x;
 		t_vec2f	yz;
 	};
@@ -77,6 +84,7 @@ t_f32	ft_vec3f_dot(t_vec3f a, t_vec3f b);
 t_f32	ft_vec3f_len(t_vec3f v);
 t_vec3f	ft_vec3f_normalized_or(t_vec3f v, t_vec3f fallback);
 t_vec3f	ft_vec3f_normalized(t_vec3f v);
+t_vec3f	ft_vec3f_fast_normalized(t_vec3f v);
 t_f32	ft_vec3f_angle(t_vec3f a, t_vec3f b);
 t_vec3f	ft_vec3f_reflect(t_vec3f incident, t_vec3f normal);
 t_vec3f	ft_vec3f_project(t_vec3f a, t_vec3f b);
@@ -109,6 +117,13 @@ typedef union s_vec4f
 		t_f32			z;
 		t_f32			w;
 	};
+	struct
+	{
+		t_f32			r;
+		t_f32			g;
+		t_f32			b;
+		t_f32			a;
+	};
 	union
 	{
 		struct
@@ -117,6 +132,7 @@ typedef union s_vec4f
 			t_vec2f		zw;
 		};
 		t_vec3f			xyz;
+		t_vec3f			rgb;
 		struct
 		{
 			t_f32		dummy_x;
