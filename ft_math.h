@@ -82,6 +82,9 @@ t_vec3f	ft_vec3f(t_f32 x, t_f32 y, t_f32 z);
 
 t_f32	ft_vec3f_dot(t_vec3f a, t_vec3f b);
 t_f32	ft_vec3f_len(t_vec3f v);
+t_f32	ft_vec3f_sqrd_len(t_vec3f v);
+t_f32	ft_vec3f_dist(t_vec3f a, t_vec3f b);
+t_f32	ft_vec3f_sqrd_dist(t_vec3f a, t_vec3f b);
 t_vec3f	ft_vec3f_normalized_or(t_vec3f v, t_vec3f fallback);
 t_vec3f	ft_vec3f_normalized(t_vec3f v);
 t_vec3f	ft_vec3f_fast_normalized(t_vec3f v);
