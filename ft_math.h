@@ -286,6 +286,7 @@ t_mat4f	ft_mat4f_transposed(t_mat4f m);
 t_mat4f	ft_mat4f_inverse(t_mat4f m);
 
 t_mat4f	ft_mat4f_rotate(t_vec3f axis, t_f32 angle);
+t_mat4f	ft_mat4f_rotate_euler(t_vec3f euler);
 t_mat4f	ft_mat4f_scale(t_vec3f scale);
 t_mat4f	ft_mat4f_translate(t_vec3f translation);
 t_mat4f	ft_mat4f_look_at(t_vec3f origin, t_vec3f dir);
