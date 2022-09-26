@@ -34,6 +34,16 @@ t_mat3f	ft_mat3f_rotate(t_vec3f axis, t_f32 angle)
 	return (res);
 }
 
+t_mat3f	ft_mat3f_rotate_euler(t_vec3f euler)
+{
+	t_mat3f	res;
+
+	res = ft_mat3f_rotate (ft_vec3f (1, 0, 0), euler.y);
+	res = ft_mat3f_mul (ft_mat3f_rotate (ft_vec3f (0, 1, 0), euler.x), res);
+	res = ft_mat3f_mul (ft_mat3f_rotate (ft_vec3f (0, 0, 1), euler.z), res);
+	return (res);
+}
+
 t_mat3f	ft_mat3f_scale(t_vec3f scale)
 {
 	t_mat3f	res;

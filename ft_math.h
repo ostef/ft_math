@@ -206,6 +206,7 @@ typedef union s_mat3f
 }	t_mat3f;
 
 t_mat3f	ft_mat3f_identity(void);
+t_mat3f	ft_mat3f_from_basis(t_vec3f right, t_vec3f up, t_vec3f forward);
 t_vec3f	ft_mat3f_column(t_mat3f m, t_int i);
 t_vec3f	ft_mat3f_right_vector(t_mat3f m);
 t_vec3f	ft_mat3f_up_vector(t_mat3f m);
@@ -215,6 +216,7 @@ t_mat3f	ft_mat3f_transposed(t_mat3f m);
 t_mat3f	ft_mat3f_inverse(t_mat3f m);
 
 t_mat3f	ft_mat3f_rotate(t_vec3f axis, t_f32 angle);
+t_mat3f	ft_mat3f_rotate_euler(t_vec3f euler);
 t_mat3f	ft_mat3f_scale(t_vec3f scale);
 
 t_mat3f	ft_mat3f_add(t_mat3f a, t_mat3f b);
@@ -277,6 +279,8 @@ typedef union s_mat4f
 }	t_mat4f;
 
 t_mat4f	ft_mat4f_identity(void);
+t_mat4f	ft_mat4f_from_basis(t_vec3f right, t_vec3f up, t_vec3f forward,
+			t_vec3f origin);
 t_vec4f	ft_mat4f_column(t_mat4f m, t_int i);
 t_vec3f	ft_mat4f_right_vector(t_mat4f m);
 t_vec3f	ft_mat4f_up_vector(t_mat4f m);
