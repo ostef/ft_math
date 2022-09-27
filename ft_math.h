@@ -34,6 +34,9 @@ t_vec2f	ft_vec2f(t_f32 x, t_f32 y);
 
 t_f32	ft_vec2f_dot(t_vec2f a, t_vec2f b);
 t_f32	ft_vec2f_len(t_vec2f v);
+t_f32	ft_vec2f_sqrd_len(t_vec2f v);
+t_f32	ft_vec2f_dist(t_vec2f a, t_vec2f b);
+t_f32	ft_vec2f_sqrd_dist(t_vec2f a, t_vec2f b);
 t_vec2f	ft_vec2f_normalized_or(t_vec2f v, t_vec2f fallback);
 t_vec2f	ft_vec2f_normalized(t_vec2f v);
 t_f32	ft_vec2f_angle(t_vec2f a, t_vec2f b);

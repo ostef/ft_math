@@ -22,6 +22,11 @@ t_f32	ft_vec2f_len(t_vec2f v)
 	return (sqrtf (v.x * v.x + v.y * v.y));
 }
 
+t_f32	ft_vec2f_sqrd_len(t_vec2f v)
+{
+	return (v.x * v.x + v.y * v.y);
+}
+
 t_vec2f	ft_vec2f_normalized_or(t_vec2f v, t_vec2f fallback)
 {
 	if (ft_vec2f_approx_zero (v, 0.00001f))
