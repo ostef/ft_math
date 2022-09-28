@@ -43,6 +43,7 @@ t_f32	ft_vec2f_angle(t_vec2f a, t_vec2f b);
 t_vec2f	ft_vec2f_reflect(t_vec2f incident, t_vec2f normal);
 t_vec2f	ft_vec2f_project(t_vec2f a, t_vec2f b);
 t_vec2f	ft_vec2f_reject(t_vec2f a, t_vec2f b);
+t_vec2f	ft_vec2f_lerp(t_vec2f a, t_vec2f b, t_f32 t);
 
 t_f32	ft_vec2f_signed_angle(t_vec2f a, t_vec2f b);
 t_vec2f	ft_vec2f_rotate(t_vec2f v, t_f32 a);
@@ -95,6 +96,7 @@ t_f32	ft_vec3f_angle(t_vec3f a, t_vec3f b);
 t_vec3f	ft_vec3f_reflect(t_vec3f incident, t_vec3f normal);
 t_vec3f	ft_vec3f_project(t_vec3f a, t_vec3f b);
 t_vec3f	ft_vec3f_reject(t_vec3f a, t_vec3f b);
+t_vec3f	ft_vec3f_lerp(t_vec3f a, t_vec3f b, t_f32 t);
 
 t_vec3f	ft_vec3f_cross(t_vec3f a, t_vec3f b);
 t_f32	ft_vec3f_signed_angle(t_vec3f a, t_vec3f b, t_vec3f axis);
@@ -162,6 +164,7 @@ t_f32	ft_vec4f_angle(t_vec4f a, t_vec4f b);
 t_vec4f	ft_vec4f_reflect(t_vec4f incident, t_vec4f normal);
 t_vec4f	ft_vec4f_project(t_vec4f a, t_vec4f b);
 t_vec4f	ft_vec4f_reject(t_vec4f a, t_vec4f b);
+t_vec4f	ft_vec4f_lerp(t_vec4f a, t_vec4f b, t_f32 t);
 
 t_vec4f	ft_vec4f_add(t_vec4f a, t_vec4f b);
 t_vec4f	ft_vec4f_sub(t_vec4f a, t_vec4f b);

@@ -33,3 +33,14 @@ t_vec4f	ft_vec4f_normalized(t_vec4f v)
 {
 	return (ft_vec4f_normalized_or (v, ft_vec4f (0, 0, 0, 0)));
 }
+
+t_vec4f	ft_vec4f_lerp(t_vec4f a, t_vec4f b, t_f32 t)
+{
+	t_vec4f	res;
+
+	res.x = ft_lerp (a.x, b.x, t);
+	res.y = ft_lerp (a.y, b.y, t);
+	res.z = ft_lerp (a.z, b.z, t);
+	res.w = ft_lerp (a.w, b.w, t);
+	return (res);
+}
