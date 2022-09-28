@@ -75,6 +75,12 @@ typedef union s_vec3f
 	};
 	struct
 	{
+		t_f32	h;
+		t_f32	s;
+		t_f32	v;
+	};
+	struct
+	{
 		t_f32	dummy_x;
 		t_vec2f	yz;
 	};
@@ -132,6 +138,12 @@ typedef union s_vec4f
 		t_f32			b;
 		t_f32			a;
 	};
+	struct
+	{
+		t_f32			h;
+		t_f32			s;
+		t_f32			v;
+	};
 	union
 	{
 		struct
@@ -141,6 +153,7 @@ typedef union s_vec4f
 		};
 		t_vec3f			xyz;
 		t_vec3f			rgb;
+		t_vec3f			hsv;
 		struct
 		{
 			t_f32		dummy_x;
