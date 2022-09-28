@@ -308,4 +308,23 @@ t_mat4f	ft_mat4f_mul(t_mat4f a, t_mat4f b);
 t_vec3f	ft_mat4f_transform_point(t_mat4f m, t_vec3f v);
 t_vec3f	ft_mat4f_transform_vector(t_mat4f m, t_vec3f v);
 
+typedef union u_rectf
+{
+	struct
+	{
+		t_f32	x;
+		t_f32	y;
+		t_f32	w;
+		t_f32	h;
+	};
+	struct
+	{
+		t_vec2f	pos;
+		t_vec2f	size;
+	};
+	t_f32		n[4];
+}	t_rectf;
+
+t_rectf	ft_rectf(t_f32 x, t_f32 y, t_f32 w, t_f32 h);
+
 #endif
