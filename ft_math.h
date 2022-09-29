@@ -54,6 +54,7 @@ t_vec2f	ft_vec2f_add(t_vec2f a, t_vec2f b);
 t_vec2f	ft_vec2f_sub(t_vec2f a, t_vec2f b);
 t_vec2f	ft_vec2f_neg(t_vec2f a);
 t_vec2f	ft_vec2f_mulf(t_vec2f v, t_f32 s);
+t_vec2f	ft_vec2f_mulv(t_vec2f a, t_vec2f b);
 t_vec2f	ft_vec2f_divf(t_vec2f v, t_f32 s);
 
 t_bool	ft_vec2f_approx_equ(t_vec2f a, t_vec2f b, t_f32 e);
@@ -98,6 +99,7 @@ t_f32	ft_vec3f_sqrd_dist(t_vec3f a, t_vec3f b);
 t_vec3f	ft_vec3f_normalized_or(t_vec3f v, t_vec3f fallback);
 t_vec3f	ft_vec3f_normalized(t_vec3f v);
 t_vec3f	ft_vec3f_fast_normalized(t_vec3f v);
+t_vec3f	ft_vec3f_direction(t_vec3f a, t_vec3f b);
 t_f32	ft_vec3f_angle(t_vec3f a, t_vec3f b);
 t_vec3f	ft_vec3f_reflect(t_vec3f incident, t_vec3f normal);
 t_vec3f	ft_vec3f_project(t_vec3f a, t_vec3f b);
@@ -114,6 +116,7 @@ t_vec3f	ft_vec3f_add(t_vec3f a, t_vec3f b);
 t_vec3f	ft_vec3f_sub(t_vec3f a, t_vec3f b);
 t_vec3f	ft_vec3f_neg(t_vec3f a);
 t_vec3f	ft_vec3f_mulf(t_vec3f v, t_f32 s);
+t_vec3f	ft_vec3f_mulv(t_vec3f a, t_vec3f b);
 t_vec3f	ft_vec3f_divf(t_vec3f v, t_f32 s);
 
 t_bool	ft_vec3f_approx_equ(t_vec3f a, t_vec3f b, t_f32 e);
@@ -183,6 +186,7 @@ t_vec4f	ft_vec4f_add(t_vec4f a, t_vec4f b);
 t_vec4f	ft_vec4f_sub(t_vec4f a, t_vec4f b);
 t_vec4f	ft_vec4f_neg(t_vec4f a);
 t_vec4f	ft_vec4f_mulf(t_vec4f v, t_f32 s);
+t_vec4f	ft_vec4f_mulv(t_vec4f a, t_vec4f b);
 t_vec4f	ft_vec4f_divf(t_vec4f v, t_f32 s);
 
 t_bool	ft_vec4f_approx_equ(t_vec4f a, t_vec4f b, t_f32 e);
